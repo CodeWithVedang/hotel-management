@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+  <link rel="stylesheet" href="styles/invoice.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Invoice Details -->
+    <div class="invoice-details">
+      <h2>Invoice</h2>
+      <p><strong>Booking ID:</strong> <span id="invoice-booking-id"></span></p>
+      <p><strong>Guest Name:</strong> <span id="invoice-guest-name"></span></p>
+      <p><strong>Room Number:</strong> <span id="invoice-room-number"></span></p>
+      <p><strong>Check-In Date:</strong> <span id="invoice-check-in-date"></span></p>
+      <p><strong>Check-Out Date:</strong> <span id="invoice-check-out-date"></span></p>
+      <p><strong>Total Amount:</strong> <span id="invoice-total-amount"></span></p>
+      <p><strong>Payment Method:</strong> <span id="invoice-payment-method"></span></p>
+      <p><strong>Payment Date:</strong> <span id="invoice-payment-date"></span></p>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/invoice.js"></script>
+</body>
+</html>

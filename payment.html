@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="styles/payment.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Payment Form -->
+    <div class="form-container">
+      <h2>Payment Details</h2>
+      <form id="payment-form">
+        <input type="text" id="booking-id" readonly>
+        <input type="number" id="total-amount" readonly>
+        <select id="payment-method" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="debit-card">Debit Card</option>
+          <option value="upi">UPI</option>
+          <option value="cash">Cash</option>
+        </select>
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/payment.js"></script>
+</body>
+</html>

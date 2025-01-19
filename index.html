@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Management System</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Hotel Selection Form -->
+    <div id="hotel-selection-form" class="form-container">
+      <h2>Select Hotel</h2>
+      <form id="hotel-selection">
+        <select id="hotel-list" required>
+          <option value="">Select Hotel</option>
+          <!-- Hotel options will be dynamically populated -->
+        </select>
+        <button type="submit" id="select-hotel-btn">Select Hotel</button>
+      </form>
+    </div>
+
+    <!-- Login Form (Hidden by Default) -->
+    <div id="login-form" class="form-container" style="display: none;">
+      <h2>Login</h2>
+      <form id="login">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit" id="login-btn">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
+    </div>
+
+    <!-- Registration Form (Hidden by Default) -->
+    <div id="register-form" class="form-container" style="display: none;">
+      <h2>Register</h2>
+      <form id="register">
+        <input type="text" id="register-name" placeholder="Full Name" required>
+        <input type="email" id="register-email" placeholder="Email" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <select id="register-role">
+          <option value="guest">Guest</option>
+          <option value="receptionist">Receptionist</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit" id="register-btn">Register</button>
+      </form>
+      <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+    </div>
+
+    <!-- Profile Section (Hidden by Default) -->
+    <div id="profile-section" class="form-container" style="display: none;">
+      <h2>Profile</h2>
+      <p>Name: <span id="profile-name"></span></p>
+      <p>Email: <span id="profile-email"></span></p>
+      <p>Role: <span id="profile-role"></span></p>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/auth.js"></script>
+</body>
+</html>

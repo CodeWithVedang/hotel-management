@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Management</title>
+  <link rel="stylesheet" href="styles/room.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Room Management Header -->
+    <h1>Room Management</h1>
+
+    <!-- Add Room Form -->
+    <div class="form-container">
+      <h2>Add New Room</h2>
+      <form id="add-room-form">
+        <input type="text" id="room-number" placeholder="Room Number" required>
+        <select id="room-type" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+        <input type="number" id="room-price" placeholder="Price per Night" required>
+        <input type="text" id="room-amenities" placeholder="Amenities (comma separated)" required>
+        <button type="submit">Add Room</button>
+      </form>
+    </div>
+
+    <!-- Edit Room Form (Hidden by Default) -->
+    <div id="edit-room-form" class="form-container" style="display: none;">
+      <h2>Edit Room</h2>
+      <form id="edit-room">
+        <input type="text" id="edit-room-number" placeholder="Room Number" readonly>
+        <select id="edit-room-type" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+        <input type="number" id="edit-room-price" placeholder="Price per Night" required>
+        <input type="text" id="edit-room-amenities" placeholder="Amenities (comma separated)" required>
+        <button type="submit">Update Room</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Room List -->
+    <div class="room-list">
+      <h2>Room List</h2>
+      <table id="room-table">
+        <thead>
+          <tr>
+            <th>Room Number</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Amenities</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Room rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/room.js"></script>
+</body>
+</html>

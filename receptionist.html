@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receptionist - Confirm Bookings</title>
+  <link rel="stylesheet" href="styles/receptionist.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Booking List -->
+    <div class="booking-list">
+      <h2>Booking List</h2>
+      <table id="booking-table">
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>Room Number</th>
+            <th>Guest Name</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Payment Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Edit Payment Form (Hidden by Default) -->
+    <div id="edit-payment-form" class="form-container" style="display: none;">
+      <h2>Update Payment Status</h2>
+      <form id="edit-payment">
+        <input type="text" id="edit-booking-id" readonly>
+        <select id="edit-payment-status" required>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+        <button type="submit">Update Payment</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+    </div>
+    <!-- Add this button somewhere in the receptionist.html file -->
+<div class="inventory-button-container">
+  <button id="manage-inventory-btn">Manage Inventory</button>
+</div>
+  </div>
+
+  <script type="module" src="scripts/receptionist.js"></script>
+</body>
+</html>

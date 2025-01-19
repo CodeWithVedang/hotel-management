@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest - Book a Room</title>
+  <link rel="stylesheet" href="styles/guest.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="form-container">
+      <h2>Book a Room</h2>
+      <form id="booking-form">
+        <input type="text" id="guest-name" placeholder="Guest Name" required>
+        <input type="email" id="guest-email" placeholder="Guest Email" required readonly>
+        <select id="room-number" required>
+          <option value="">Select Room</option>
+          <!-- Room options will be dynamically populated -->
+        </select>
+        <!-- Room Details Section -->
+        <div id="room-details" class="room-details">
+          <!-- Room details will be dynamically populated here -->
+        </div>
+        <input type="date" id="check-in-date" required>
+        <input type="date" id="check-out-date" required>
+        <button type="submit">Book Room</button>
+      </form>
+    </div>
+
+    <!-- Booking Requests -->
+    <div class="booking-list">
+      <h2>Your Booking Requests</h2>
+      <table id="booking-table">
+        <thead>
+          <tr>
+            <th>Room Number</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Payment Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/guest.js"></script>
+</body>
+</html>

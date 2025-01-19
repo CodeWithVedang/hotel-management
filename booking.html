@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking and Reservations</title>
+  <link rel="stylesheet" href="styles/booking.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Booking Header -->
+    <h1>Booking and Reservations</h1>
+
+    <!-- Booking Form -->
+    <div class="form-container">
+      <h2>Book a Room</h2>
+      <form id="booking-form">
+        <input type="text" id="guest-name" placeholder="Guest Name" required>
+        <input type="email" id="guest-email" placeholder="Guest Email" required>
+        <select id="room-number" required>
+          <!-- Room options will be dynamically populated -->
+        </select>
+        <input type="date" id="check-in-date" required>
+        <input type="date" id="check-out-date" required>
+        <button type="submit">Book Room</button>
+      </form>
+    </div>
+
+    <!-- Booking List -->
+    <div class="booking-list">
+      <h2>Booking List</h2>
+      <table id="booking-table">
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>Room Number</th>
+            <th>Guest Name</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/booking.js"></script>
+</body>
+</html>

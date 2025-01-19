@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Hotel and Room Management</title>
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logout Button -->
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <!-- Hotel Selection Dropdown -->
+    <div class="form-container">
+      <h2>Select Hotel</h2>
+      <select id="hotel-select">
+        <option value="">Select Hotel</option>
+        <!-- Hotel options will be dynamically populated -->
+      </select>
+    </div>
+
+    <!-- Add Hotel Form -->
+    <div class="form-container">
+      <h2>Add New Hotel</h2>
+      <form id="add-hotel-form">
+        <input type="text" id="hotel-name" placeholder="Hotel Name" required>
+        <input type="text" id="hotel-address" placeholder="Hotel Address" required>
+        <input type="text" id="hotel-phone" placeholder="Hotel Phone" required>
+        <button type="submit">Add Hotel</button>
+      </form>
+    </div>
+
+    <!-- Add Room Form -->
+    <div class="form-container">
+      <h2>Add New Room</h2>
+      <form id="add-room-form">
+        <input type="text" id="room-number" placeholder="Room Number" required>
+        <select id="room-type" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+        <input type="number" id="room-price" placeholder="Price per Night" required>
+        <input type="text" id="room-amenities" placeholder="Amenities (comma separated)" required>
+        <button type="submit">Add Room</button>
+      </form>
+    </div>
+
+    <!-- Edit Room Form (Hidden by Default) -->
+    <div id="edit-room-form" class="form-container" style="display: none;">
+      <h2>Edit Room</h2>
+      <form id="edit-room">
+        <input type="text" id="edit-room-number" placeholder="Room Number" readonly>
+        <select id="edit-room-type" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+        <input type="number" id="edit-room-price" placeholder="Price per Night" required>
+        <input type="text" id="edit-room-amenities" placeholder="Amenities (comma separated)" required>
+        <button type="submit">Update Room</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Room List in Card Format -->
+    <div class="room-list">
+      <h2>Room List</h2>
+      <div id="room-cards" class="card-grid">
+        <!-- Room cards will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/admin.js"></script>
+</body>
+</html>
